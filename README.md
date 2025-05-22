@@ -4,14 +4,6 @@
 
 Podemos descargar el `apk` y el servidor de la URL https://github.com/dineshshetty/Android-InsecureBankv2/releases/tag/2.3.1
 
-### Ejecutar servidor InsecureBank
-
-Abrimos una terminal en el directorio del servidor y ejecutamso `pip install -r requirements.txt`.
-
-![imagen](https://github.com/user-attachments/assets/a71d8acf-a62e-4d90-8ae8-3ebf3e292a34)
-
-Y accedemos a la aplicación a través del navegador con la URL http://localhost:8000/login/?next=/ y las credenciales `mobsf:mobsf`.
-
 ## Emular un dispositivo móvil en Genymotion
 
 Pinchamos en el botón `create`.
@@ -56,6 +48,10 @@ Desde la terminal de Docker decktop ejecutamos el siguiente comando que ejecutar
 ```
 docker run -it --rm -p 8000:8000 -e MOBSF_ANALYZER_IDENTIFIER=10.0.3.250:5555 opensecurity/mobile-security-framework-mobsf:latest
 ```
+
+![imagen](https://github.com/user-attachments/assets/a71d8acf-a62e-4d90-8ae8-3ebf3e292a34)
+
+Y accedemos a la aplicación a través del navegador con la URL http://localhost:8000/login/?next=/ y las credenciales `mobsf:mobsf`.
 
 ## Análisis dinámico de la aplicación
 
