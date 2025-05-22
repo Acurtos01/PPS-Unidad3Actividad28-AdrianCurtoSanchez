@@ -8,13 +8,6 @@ Podemos descargar el `apk` y el servidor de la URL https://github.com/dineshshet
 
 Abrimos una terminal en el directorio del servidor y ejecutamso `pip install -r requirements.txt`.
 
-## Instalar MobSF
-
-Desde la terminal de Docker decktop ejecutamos el siguiente comando que ejecutará el container de MobSF:
-```
-docker run -it --rm -p 8000:8000 opensecurity/mobile-security-framework-mobsf:latest
-```
-
 ![imagen](https://github.com/user-attachments/assets/a71d8acf-a62e-4d90-8ae8-3ebf3e292a34)
 
 Y accedemos a la aplicación a través del navegador con la URL http://localhost:8000/login/?next=/ y las credenciales `mobsf:mobsf`.
@@ -56,6 +49,30 @@ Y ya tenemos listo el emulador.
 Para instalar la aplicación en el emulador basta con arrastrar y soltar el apk de la aplicación al emulador. Ignoramos el mensaje que nos muestra.
 
 ![imagen](https://github.com/user-attachments/assets/d4e3459a-20b4-4768-82f0-d6fd1b55d869)
+
+## Instalar MobSF
+
+Desde la terminal de Docker decktop ejecutamos el siguiente comando que ejecutará el container de MobSF:
+```
+docker run -it --rm -p 8000:8000 -e MOBSF_ANALYZER_IDENTIFIER=10.0.3.250:5555 opensecurity/mobile-security-framework-mobsf:latest
+```
+
+## Análisis dinámico de la aplicación
+
+Una vez dentro de MobSF en la URL http://localhost:8000 pinchamos en Dynamic Analyzer.
+
+![imagen](https://github.com/user-attachments/assets/e4ccbd41-fb99-4b21-9cb5-bbd5cebbbc16)
+
+Seleccionamos la opción de Android Dinamic Analyzer.
+
+![imagen](https://github.com/user-attachments/assets/46f3ef38-0752-4092-ba46-e6e1bea9413c)
+
+Vemos que ha detectado el emulador perfectamente, al abrir la aplicación a analizar deberá detectarla.
+
+
+
+
+
 
 
 
